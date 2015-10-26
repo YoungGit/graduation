@@ -49,7 +49,7 @@
             <!-- Optionally, you can add icons to the links -->
             <li><a href="#"><i class="fa fa-link"></i> <span>链接</span></a></li>
             <li class="treeview">
-                <a href="#"><i class="fa fa-link"></i> <span>多层</span> <i
+                <a href="#"><i class="fa fa-align-center"></i> <span>多层</span> <i
                         class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="#">1-1</a></li>
@@ -57,7 +57,7 @@
                 </ul>
             </li>
             <li class="treeview">
-                <a href="#"><i class="fa fa-link"></i> <span>多层2</span> <i
+                <a href="#"><i class="fa fa-list"></i> <span>多层2</span> <i
                         class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="#">2-1</a></li>

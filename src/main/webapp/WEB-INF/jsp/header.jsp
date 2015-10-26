@@ -18,9 +18,9 @@
   <!-- Logo -->
   <a href="<%=basePath%>home" class="logo">
     <!-- mini logo for sidebar mini 50x50 pixels -->
-    <span class="logo-mini"><b>A</b>MS</span>
+    <span class="logo-mini"><b>E</b>DM</span>
     <!-- logo for regular state and mobile devices -->
-    <span class="logo-lg"><b>Advanced</b>Mining System</span>
+    <span class="logo-lg"><b>Enterprise</b>Data Mining</span>
   </a>
 
   <!-- Header Navbar -->

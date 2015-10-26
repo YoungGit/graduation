@@ -11,7 +11,7 @@
     <title>Home</title>
     <%@ include file="/WEB-INF/jsp/head.jsp" %>
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-green sidebar-mini">
     <div class="wrapper">
         <jsp:include page="/WEB-INF/jsp/header.jsp"></jsp:include>
         <jsp:include page="/WEB-INF/jsp/main_sidebar.jsp"></jsp:include>
@@ -20,12 +20,12 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    Page Header
-                    <small>Optional description</small>
+                    标题
+                    <small>可选副标题</small>
                 </h1>
                 <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-                    <li class="active">Here</li>
+                    <li><a href="#"><i class="fa fa-dashboard"></i> 顶级</a></li>
+                    <li class="active">当前</li>
                 </ol>
             </section>
 

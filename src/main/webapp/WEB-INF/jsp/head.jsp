@@ -31,7 +31,7 @@
       href="<%=basePath%>resources/adminlte/css/AdminLTE.min.css">
 <!-- AdminLTE Skins -->
 <link rel="stylesheet" type="text/css"
-      href="<%=basePath%>resources/adminlte/css/skins/skin-blue.min.css">
+      href="<%=basePath%>resources/adminlte/css/skins/skin-green.min.css">
 
 <!-- jquery -->
 <script src="<%=basePath%>resources/plugins/jQuery/jQuery-2.1.4.min.js"
