@@ -11,9 +11,6 @@ import java.util.Collection;
 public class ItemEntity {
     private Integer id;
     private String name;
-    private Integer aspectNum;
-    private String aspectSeed;
-    private String aspectWords;
     private Collection<CommentEntity> commentsById;
     private CategoryEntity category;
 
@@ -38,35 +35,7 @@ public class ItemEntity {
         this.name = name;
     }
 
-    @Basic
-    @Column(name = "aspect_num", nullable = true, insertable = true, updatable = true)
-    public Integer getAspectNum() {
-        return aspectNum;
-    }
 
-    public void setAspectNum(Integer aspectNum) {
-        this.aspectNum = aspectNum;
-    }
-
-    @Basic
-    @Column(name = "aspect_seed", nullable = true, insertable = true, updatable = true, length = 500)
-    public String getAspectSeed() {
-        return aspectSeed;
-    }
-
-    public void setAspectSeed(String aspectSeed) {
-        this.aspectSeed = aspectSeed;
-    }
-
-    @Basic
-    @Column(name = "aspect_words", nullable = true, insertable = true, updatable = true, length = 2000)
-    public String getAspectWords() {
-        return aspectWords;
-    }
-
-    public void setAspectWords(String aspectWords) {
-        this.aspectWords = aspectWords;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -78,9 +47,6 @@ public class ItemEntity {
         if (id != that.id) return false;
         if (category != that.category) return false;
         if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (aspectNum != null ? !aspectNum.equals(that.aspectNum) : that.aspectNum != null) return false;
-        if (aspectSeed != null ? !aspectSeed.equals(that.aspectSeed) : that.aspectSeed != null) return false;
-        if (aspectWords != null ? !aspectWords.equals(that.aspectWords) : that.aspectWords != null) return false;
 
         return true;
     }
@@ -89,9 +55,6 @@ public class ItemEntity {
     public int hashCode() {
         int result = id;
         result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (aspectNum != null ? aspectNum.hashCode() : 0);
-        result = 31 * result + (aspectSeed != null ? aspectSeed.hashCode() : 0);
-        result = 31 * result + (aspectWords != null ? aspectWords.hashCode() : 0);
         return result;
     }
 
@@ -104,7 +67,7 @@ public class ItemEntity {
         this.commentsById = commentsById;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     public CategoryEntity getCategory() {
         return category;

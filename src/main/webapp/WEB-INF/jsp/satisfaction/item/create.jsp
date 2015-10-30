@@ -10,7 +10,7 @@
 <html>
 <head>
     <title>Home</title>
-    <%@ include file="/WEB-INF/jsp/head.jsp" %>
+    <%@ include file="/WEB-INF/jsp/common_head_css.jsp" %>
 </head>
 <body class="hold-transition skin-green sidebar-mini">
 <div class="wrapper">
@@ -45,7 +45,7 @@
 
                                     <div class="col-md-8">
                                         <form:select path="category.id" cssClass="form-control">
-                                            <form:options items="${categoryList}" itemValue="id" itemLabel="name" />
+                                            <form:options items="${categoryList}" itemValue="id" itemLabel="name"/>
                                         </form:select>
                                     </div>
                                 </div>
@@ -80,7 +80,8 @@
                             </div>
                             <div class="box-footer">
                                 <button type="submit" class="btn btn-primary"
-                                             style="text-align: center">提交</button>
+                                        style="text-align: center">提交
+                                </button>
                             </div>
                         </form:form>
                     </div>
@@ -94,5 +95,6 @@
     <jsp:include page="/WEB-INF/jsp/controll_sidebar.jsp"></jsp:include>
 </div>
 <!-- ./wrapper -->
+<jsp:include page="/WEB-INF/jsp/common_js.jsp"></jsp:include>
 </body>
 </html>

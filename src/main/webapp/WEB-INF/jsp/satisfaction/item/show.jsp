@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Home</title>
-    <%@ include file="/WEB-INF/jsp/head.jsp" %>
+    <%@ include file="/WEB-INF/jsp/common_head_css.jsp" %>
 </head>
 <body class="hold-transition skin-green sidebar-mini">
 <div class="wrapper">
@@ -90,5 +90,6 @@
     <jsp:include page="/WEB-INF/jsp/controll_sidebar.jsp"></jsp:include>
 </div>
 <!-- ./wrapper -->
+<jsp:include page="/WEB-INF/jsp/common_js.jsp"></jsp:include>
 </body>
 </html>

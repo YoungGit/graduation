@@ -32,13 +32,3 @@
 <!-- AdminLTE Skins -->
 <link rel="stylesheet" type="text/css"
       href="<%=basePath%>resources/adminlte/css/skins/skin-green.min.css">
-
-<!-- jquery -->
-<script src="<%=basePath%>resources/plugins/jQuery/jQuery-2.1.4.min.js"
-        type="text/javascript"></script>
-<!-- bootstrap js -->
-<script src="<%=basePath%>resources/bootstrap/js/bootstrap.min.js"
-        type="text/javascript"></script>
-<!-- AdminLTE App js -->
-<script src="<%=basePath%>resources/adminlte/js/app.min.js"
-        type="text/javascript"></script>

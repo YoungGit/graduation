@@ -9,10 +9,8 @@ import javax.persistence.*;
 @Table(name = "comment")
 public class CommentEntity {
     private int id;
-    private String url;
     private String raw;
-    private String segment;
-    private CategoryEntity category;
+    private String pos;
     private ItemEntity item;
 
     @Id
@@ -27,16 +25,6 @@ public class CommentEntity {
     }
 
     @Basic
-    @Column(name = "url", nullable = true, insertable = true, updatable = true, length = 1000)
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    @Basic
     @Column(name = "raw", nullable = true, insertable = true, updatable = true, length = 2000)
     public String getRaw() {
         return raw;
@@ -47,13 +35,13 @@ public class CommentEntity {
     }
 
     @Basic
-    @Column(name = "segment", nullable = true, insertable = true, updatable = true, length = 3000)
-    public String getSegment() {
-        return segment;
+    @Column(name = "pos", nullable = true, insertable = true, updatable = true, length = 3000)
+    public String getPos() {
+        return pos;
     }
 
-    public void setSegment(String segment) {
-        this.segment = segment;
+    public void setPos(String segment) {
+        this.pos = segment;
     }
 
     @Override
@@ -64,9 +52,8 @@ public class CommentEntity {
         CommentEntity that = (CommentEntity) o;
 
         if (id != that.id) return false;
-        if (url != null ? !url.equals(that.url) : that.url != null) return false;
         if (raw != null ? !raw.equals(that.raw) : that.raw != null) return false;
-        if (segment != null ? !segment.equals(that.segment) : that.segment != null) return false;
+        if (pos != null ? !pos.equals(that.pos) : that.pos != null) return false;
 
         return true;
     }
@@ -74,23 +61,12 @@ public class CommentEntity {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + (url != null ? url.hashCode() : 0);
         result = 31 * result + (raw != null ? raw.hashCode() : 0);
-        result = 31 * result + (segment != null ? segment.hashCode() : 0);
+        result = 31 * result + (pos != null ? pos.hashCode() : 0);
         return result;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "category_id", referencedColumnName = "id")
-    public CategoryEntity getCategory() {
-        return category;
-    }
-
-    public void setCategory(CategoryEntity category) {
-        this.category = category;
-    }
-
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "item_id", referencedColumnName = "id")
     public ItemEntity getItem() {
         return item;
